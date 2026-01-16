@@ -5,8 +5,6 @@ import { motion } from 'framer-motion'
 const fadeIn = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-  viewport: { once: true },
-  transition: { duration: 0.8, ease: 'easeOut' },
 }
 
 export default function ContactSection() {
@@ -15,8 +13,9 @@ export default function ContactSection() {
       <motion.div
         initial="initial"
         whileInView="whileInView"
-        viewport="viewport"
+        viewport={{ once: true }}
         variants={fadeIn}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
         className="max-w-7xl mx-auto"
       >
         <h2 className="font-serif text-5xl sm:text-6xl font-bold text-charcoal mb-12">

@@ -7,8 +7,6 @@ import { projects } from '@/data/projects'
 const fadeIn = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-  viewport: { once: true, margin: '-100px' },
-  transition: { duration: 0.8, ease: 'easeOut' },
 }
 
 export default function ProjectsSection() {
@@ -18,8 +16,9 @@ export default function ProjectsSection() {
         <motion.h2
           initial="initial"
           whileInView="whileInView"
-          viewport="viewport"
+          viewport={{ once: true, margin: '-100px' }}
           variants={fadeIn}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="font-serif text-4xl sm:text-5xl font-bold text-charcoal mb-12"
         >
           The Archive
@@ -29,8 +28,9 @@ export default function ProjectsSection() {
         <motion.div
           initial="initial"
           whileInView="whileInView"
-          viewport="viewport"
+          viewport={{ once: true, margin: '-100px' }}
           variants={fadeIn}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="border border-charcoal divide-y divide-charcoal"
         >
           {projects.map((project, index) => (

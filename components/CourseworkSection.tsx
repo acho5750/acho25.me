@@ -51,8 +51,6 @@ const categories: CourseCategory[] = [
 const fadeIn = {
   initial: { opacity: 0 },
   whileInView: { opacity: 1 },
-  viewport: { once: true, margin: '-100px' },
-  transition: { duration: 0.8, ease: 'easeOut' },
 }
 
 export default function CourseworkSection() {
@@ -63,8 +61,9 @@ export default function CourseworkSection() {
         <motion.div
           initial="initial"
           whileInView="whileInView"
-          viewport="viewport"
+          viewport={{ once: true, margin: '-100px' }}
           variants={fadeIn}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="border border-charcoal bg-paper"
         >
           {/* Header */}

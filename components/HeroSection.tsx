@@ -5,7 +5,6 @@ import { motion } from 'framer-motion'
 const fadeIn = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
-  transition: { duration: 0.8, ease: 'easeOut' },
 }
 
 export default function HeroSection() {
@@ -19,6 +18,7 @@ export default function HeroSection() {
             initial="initial"
             animate="animate"
             variants={fadeIn}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="flex items-center"
           >
             <h1 className="text-7xl sm:text-8xl md:text-9xl font-serif font-bold text-charcoal leading-tight">
@@ -31,6 +31,7 @@ export default function HeroSection() {
             initial="initial"
             animate="animate"
             variants={fadeIn}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
             className="flex flex-col justify-center space-y-6"
           >
             <p className="text-base sm:text-lg font-mono text-charcoal">
@@ -47,6 +48,7 @@ export default function HeroSection() {
           initial="initial"
           animate="animate"
           variants={fadeIn}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="space-y-3 border-t border-b border-charcoal py-8"
         >
           <div className="font-mono text-sm sm:text-base text-charcoal space-y-2">
